@@ -2,7 +2,6 @@ Integer Mat=40;
 Integer Sci=40;
 Integer Soc=40;
 Integer TotalMarks = Mat+Sci+Soc;
-
 Integer Average = (TotalMarks*100)/300;
 String resultMat=(Mat>=40)?'Pass':'Fail';
 System.debug('Mat = '+resultMat);
@@ -16,4 +15,4 @@ String Grade=(Result =='Pass' && Average>90)?'S':(Result =='Pass' && Average>80)
 System.debug('Result = '+Result);
 system.debug('Average = '+ Average);
 system.debug('Total Marks = '+TotalMarks);
-System.debug('Grade ='+Grade);
+System.debug('Grade ='+Grade);+
