@@ -1,0 +1,11 @@
+Integer X=2;
+Integer n=10;
+Integer Sum=0;
+Integer Mul;
+for(n=1;n<=10;n++)
+{
+    Mul = n*X;
+    Sum += Mul;
+    system.debug(Mul);
+    }
+System.debug('The value is '+Sum);
