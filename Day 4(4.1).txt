@@ -1,0 +1,8 @@
+Integer Sum=0;
+Integer Count;
+    for(Count=1;Count<=10;Count+=2)
+    {
+        System.debug(Count);
+        Sum += Count;
+    }
+System.debug('Sum of Odd values = '+Sum);
