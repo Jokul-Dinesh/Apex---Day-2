@@ -1,0 +1,23 @@
+integer FirstNumber=150;
+integer SecondNumber=120;
+String Operation='*';  	//+,-,*,/
+Integer Result;
+if (Operation=='+') 
+{Result = FirstNumber+SecondNumber;    
+System.debug( 'Sum of '+FirstNumber+ ' and '+SecondNumber+ ' is ' +Result );
+}
+
+else if (Operation=='-')
+{Result = FirstNumber-SecondNumber; 
+System.debug('Sub of '+FirstNumber+ ' & '+SecondNumber+ ' is '+Result);
+}
+else if (Operation=='*')
+{Result = FirstNumber*SecondNumber; 
+System.debug('Multiply of '+FirstNumber+ ' & '+SecondNumber+ ' is '+Result);
+}
+else if (Operation=='/')
+{Result = FirstNumber/SecondNumber; 
+System.debug('Division of '+FirstNumber+ ' & '+SecondNumber+ ' is '+Result);
+}
+else 
+{System.debug('Invalid Operation'); }
