@@ -1,0 +1,10 @@
+integer X=150;
+integer Y=120;
+integer Z=20;
+
+if ((X>Y) && (X>Z))
+{System.debug('X is the biggest number');}
+else if (Y>Z)
+{System.debug('Y is the biggest number');}
+else 
+{System.debug('Z is the biggest Number');}
