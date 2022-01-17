@@ -1,0 +1,20 @@
+string button1 = 'Withdrawal';
+string button2 = 'Deposit';
+system.debug('1='+ button1);
+system.debug('2='+ button2);
+string enteredOption = button1;
+system.debug('Selected Operation ='+ (enteredOption));
+integer currentBalance = 50000;
+integer enteredAmount=5000;
+if(enteredOption == button1)
+{
+  system.debug('Current Balance ='+ (currentBalance - enteredAmount));  
+}
+else if(enteredOption == button2)
+{
+    system.debug('Current Balance ='+ (currentBalance + enteredAmount));
+}
+else
+{
+    system.debug('Invalid option entered');
+}
