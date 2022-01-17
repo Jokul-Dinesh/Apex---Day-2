@@ -1,0 +1,6 @@
+Integer Table=4;
+Integer Count=1;
+for(Count=1;Count<=12;Count++)
+{
+    System.debug(Table+'*'+Count+'='+(Table*Count));
+    }
