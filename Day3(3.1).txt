@@ -1,0 +1,39 @@
+Integer Mat=50;
+Integer Sci=30;
+Integer Soc=60;
+Integer TotalMarks = Mat+Sci+Soc;
+Integer Average = (TotalMarks*100)/300;
+String ResultMat;
+String ResultSci;
+String ResultSoc;
+String Result;
+String Grade;
+
+if (Mat>=40){ResultMat = 'Pass';}
+else{ResultMat = 'Fail';}
+
+if (Sci>=40){ResultSci = 'Pass';}
+else{ResultSci = 'Fail';}
+
+if (Soc>=40){ResultSoc = 'Pass';}
+else{ResultSoc = 'Fail';}
+
+if (ResultMat =='Pass' && ResultSci =='Pass' && ResultSoc =='Pass')
+{Result = 'Pass';}
+    else{Result = 'Fail';}
+        
+        if (Result =='Pass' && Average>90){Grade = 'S';}
+            
+            else if ( Result =='Pass' && Average>80 ){Grade = 'A';}
+                
+                else if (Result =='Pass' && Average>70){Grade = 'B';}
+                    
+                    else if (Result =='Pass' && Average<70){Grade = 'C';}
+                        
+                        else {Grade = 'No Grade';}
+                            
+system.debug('Result Mat = ' +ResultMat);      
+system.debug('Result Sci = ' +ResultSci);
+system.debug('Result Soc = ' +ResultSoc);
+system.debug('Final Result = ' +Result);
+system.debug('Grade = ' +Grade);
