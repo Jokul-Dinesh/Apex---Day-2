@@ -1,0 +1,15 @@
+Integer OddSum=0;
+Integer EvenSum=0;
+Integer Count;
+for(Count=1;Count<=20;Count+=2)
+{
+    System.debug(Count);
+    OddSum += Count;
+}
+System.debug('Sum of Odd values = '+OddSum);
+for(Count=2;Count<=20;Count+=2)
+{
+    System.debug(Count);
+    EvenSum += Count;
+}
+System.debug('Sum of Even values = '+EvenSum);
