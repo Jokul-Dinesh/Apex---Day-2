@@ -1,0 +1,85 @@
+public class Result {
+    public void StuResult(Integer language_mark,Integer maths_mark,Integer science_mark){
+        Integer Total = maths_mark+language_mark+science_mark;
+        Integer Average = (Total/300)*100;
+        String language;
+        String science;
+        String Maths;
+        String Result;
+        string Grade;
+        
+        if (language_mark>=40)
+        {
+            language = 'Pass';
+        }
+        else
+        {
+            language = 'Fail';
+        }
+        
+        
+        if (maths_mark>=40)
+        {
+            Maths = 'Pass';
+        }
+        else
+        {
+            Maths = 'Fail';
+        }
+        
+        
+        if (science_mark>=40)
+        {
+            science = 'Pass';
+        }
+        else
+        {
+            science = 'Fail';
+        }
+        
+        system.debug('Language Result ='+language);
+        system.debug('Maths Result ='+Maths);
+        system.debug('Science Result ='+Science);
+        
+        if (language == 'pass' && Maths == 'pass' && Science == 'pass')
+        {
+            Result = 'pass' ;
+        }
+        else {
+            Result = 'Fail' ;
+        }       
+        
+        if (Result=='pass' && Average>90)
+        {
+            Grade = 'S - Grade';
+        }
+        else if (Result=='pass' && Average>80)
+        {
+            Grade = 'A - Grade';
+        }
+        else if (Result=='pass' && Average>70)
+        {
+            Grade = 'B - Grade';
+        }
+        else if (Result=='pass' && Average<70)
+        {
+            Grade = 'C - Grade';
+        }
+        else 
+        {
+            Grade = 'No Grade';
+        }
+        
+        system.debug('Overall Result =' +result);
+        system.debug('Total Marks ='+Total);
+        system.debug('Grade ='+grade);
+        
+    }
+    
+}
+
+
+/*Anonymous Window
+Result DinResult = new Result();
+DinResult.StuResult(41,45,50);
+*/
