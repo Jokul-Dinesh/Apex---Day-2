@@ -1,0 +1,36 @@
+Public class Calc
+{
+Integer Fnum;
+Integer Snum;
+String Operator;  //*,-,+,/
+Public void calculator (integer Fnum,string Operator,integer Snum)
+{
+If (operator == '*')
+{ 
+System.debug('answer is ' +(Fnum*Snum));
+}
+Else if (operator == '-')
+{ 
+System.debug('answer is ' +(Fnum-Snum));
+}
+Else if (operator == '+')
+{ 
+System.debug('answer is ' +(Fnum+Snum));
+}
+Else if (operator == '/')
+{ 
+System.debug('answer is ' +(Fnum/Snum));
+}
+Else {
+System.debug('Invalid number');
+    }
+}
+}
+
+
+/*Anonymous Window
+
+Calc DinCalc = new Calc();
+DinCalc.Calculator(10,'*',10);
+
+*/
