@@ -1,0 +1,26 @@
+public class Banking {
+    public void CashProcess(String Option,Integer Amount){
+    
+    Integer Current_balance = 500000;
+//String Option = 'D'; //D=Deposit & WD=Withdrawal
+//Integer Amount = 10000;
+    if (Option == 'D')
+{
+    system.debug(Current_balance + Amount);
+}
+else if (Option == 'WD')
+{
+    system.debug(Current_balance - Amount);
+}
+else
+{
+    system.debug('Invalid Operation');
+}
+
+}
+}
+
+/*Anonymous Window
+Result DinResult = new Result();
+DinResult.StuResult(41,45,50);
+*/
