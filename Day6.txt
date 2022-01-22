@@ -1,0 +1,124 @@
+public class ProductX {  
+    
+    Integer Price;  
+    //Product Ac  
+    String ProductName1='AC';
+    Integer ProductCode1=001;
+    Integer Price1= 25000;
+    decimal Discount1 =2;
+    private Integer StockAC=35;
+    
+    //Product TV  
+    String ProductName2='TV';
+    Integer ProductCode2=002;
+    Integer Price2= 20000;
+    decimal Discount2=4;
+    private Integer StockTV=35;
+    
+    //Product WM  
+    String ProductName3='WM';
+    Integer ProductCode3=003;
+    Integer Price3= 15000;
+    decimal Discount3=2.5;
+    private Integer StockWM=35;
+    
+    
+    Public void Billing (String Product, Integer Count){
+        If(Product == 'AC'){
+            If (StockAC >= Count){ 
+                System.debug('Product Name =' +ProductName1) ;
+                System.debug('Product Code =' +ProductCode1) ; 
+                System.debug('Count you have ordered = ' +Count) ;
+                System.debug('Price for 1p of AC = ' +Price1) ;
+                Price = Count*Price1;
+                System.debug('Price for '+Count+'p of AC = ' +Price) ;
+                system.debug('Total billing amount after discount of '+discount1+'%'+' = '
+                             +(Price-(discount1*Price/100)) );
+                System.debug('Thanks for Purchasing');
+                
+                StockAC-= Count;                  
+            }    
+        }
+        
+        
+        else if(Product == 'TV'){
+            if (StockTV >= Count){ 
+                System.debug('Product Name =' +ProductName2) ;
+                System.debug('Product Code =' +ProductCode2) ; 
+                System.debug('Count you have ordered = ' +Count) ;
+                System.debug('Price for 1p of TV = ' +Price2) ;
+                Price = Count*Price2;
+                System.debug('Price for '+Count+'p of TV = ' +Price) ;
+                system.debug('Total billing amount after discount of '+discount2+'%'+' = '
+                             +(Price-(discount1*Price/100)) );
+                System.debug('Thanks for Purchasing');
+                StockTV-= Count;                  
+            }    
+        }
+        
+        
+        else if(Product == 'WM'){
+            if (StockWM >= Count){ 
+                System.debug('Product Name =' +ProductName3) ;
+                System.debug('Product Code =' +ProductCode3) ; 
+                System.debug('Count you have ordered = ' +Count) ;
+                System.debug('Price for 1p of WM = ' +Price3) ;
+                Price = Count*Price3;
+                System.debug('Price for '+Count+'p of WM = ' +Price) ;
+                system.debug('Total billing amount after discount of '+discount3+'%'+' = '
+                             +(Price-(discount1*Price/100)) );
+                System.debug('Thanks for Purchasing');
+                StockWM-= Count;                  
+            }    
+        }
+        
+        else {
+            System.debug('Invalid Error');
+        }
+    }
+    
+    
+    Public void Search (Integer  ProductCode){
+        If (ProductCode == 001){
+            
+            System.debug('Product Name = '+ProductName1);
+            System.debug('Available Stock = '+StockAC);
+            
+        }
+        else  If  (ProductCode == 002){
+            
+            System.debug('Product Name = '+ProductName2);
+            System.debug('Available Stock = '+StockTV);
+            
+        }
+        else If (ProductCode == 003){
+            
+            System.debug('Product Name = '+ProductName3);
+            System.debug('Available Stock = '+StockWM);
+            
+        }
+        else {
+            System.debug('Invalid Error');
+        }
+    }
+    
+    Public Void Reorder(){
+        if (StockAC <= 20){
+            system.debug('Product Name = '+ProductName1+ 'Product Code = ' + ProductCode1);
+            if (StockTV <= 20){
+                system.debug('Product Name = '+ProductName2+ 'Product Code = ' + ProductCode2);
+            }
+            if (StockWM <= 20){
+                system.debug('Product Name = '+ProductName3+ 'Product Code = ' + ProductCode3);
+            }
+        }
+        else {
+            System.debug('No need to Reorder for now');
+            system.debug('Product Name = '+ ProductName1 + 'Product Code = ' + ProductCode1 + 'available Stock = '+ StockAC);
+            system.debug('Product Name = '+ ProductName2 + 'Product Code = ' + ProductCode2 + 'available Stock = '+ StockTV);
+            system.debug('Product Name = '+ ProductName3 + 'Product Code = ' + ProductCode3 + 'available Stock = '+ StockWM);
+            
+            
+        }
+    }
+}
