@@ -1,0 +1,25 @@
+//alreadyexistorNot
+
+
+public class AlreadyExist 
+{
+    Public static boolean Alreadydone=True;
+    
+    public static void methods()
+    {
+        if(Alreadydone)
+        {
+            system.debug('Executing...');
+            Alreadydone=!Alreadydone;
+        }
+        else
+        {
+            system.debug('Method already exist');
+        }
+    }
+
+}
+
+//Anonymous window 
+//AlreadyExist.methods();
+//AlreadyExist.methods();
