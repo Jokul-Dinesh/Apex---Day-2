@@ -1,0 +1,37 @@
+public class ListNumbers {
+    list<Integer> Numbers = new list<Integer>{60,10,15,-2,-5,-50,0,4,3,1};
+        
+        public void BiggestAndSmallest(){
+            integer temp;
+            integer Min;
+            Integer Max;
+            Integer Value=0;
+            
+            for (Integer Numbers : Numbers ){
+                if (Value == 0){
+                    Min = Numbers;
+                    Max = Numbers;
+                }
+                else {
+                    Temp = Numbers;
+                    if (Temp > Max){
+                        Max = Temp;
+                    }
+                    if (Temp <= Min){
+                        Min = Temp;
+                    }
+               }
+                
+             
+        Value++;     }   
+            system.debug('Biggest number is '+Max);
+            system.debug('Smallest number is '+Min);
+        }}
+
+
+/**********Anonymous Window
+
+ListNumbers LN = new ListNumbers();
+LN.BiggestAndSmallest();
+
+**********/
