@@ -1,0 +1,87 @@
+public virtual class productY {
+    public List<String> ProductName = new list <String>{'AC','TV','WM'};
+        public List<Integer>Productcode = new list <integer>{101,102,103};
+            public list<integer>productPrice = new list <integer>{20000,16000,12000};
+                public List<Integer>ProductStock = new list <integer>{25,25,25}; 
+                    public List<Integer>ProductDiscount = new list <integer>{2,3,2};
+                        }
+
+/* *********************************************************************************************
+  ********************************************************************************************* */ /* *********************************************************************************************
+  ********************************************************************************************* */ 
+
+public class SuperMarket extends ProductY {
+    
+    public void Billing(string SelectedProduct , integer Quantity)
+    {
+        if (SelectedProduct == 'AC')
+        {
+            if (Quantity <= ProductStock[0])
+            {
+                integer amount = productPrice[0]-((productPrice[0]*ProductDiscount[0])/100);
+                system.debug('welcome to Dinesh SuperMarket');
+                system.debug('Price for each '+SelectedProduct+' = '+productPrice[0]);
+                system.debug('Price for '+Quantity+' '+SelectedProduct+' = '+(productPrice[0]*Quantity));
+                system.debug('Price after discount of '+ProductDiscount[0]+'% = '+amount*Quantity);
+                system.debug('Thanks for purchase');
+            }
+            else{system.debug('Out Of Stock');}
+        }
+        if (SelectedProduct == 'TV')
+        {
+            if (Quantity <= ProductStock[1])
+            {
+                integer amount = productPrice[1]-((productPrice[1]*ProductDiscount[1])/100);
+                system.debug('welcome to Dinesh SuperMarket');
+                system.debug('Price for each '+SelectedProduct+' = '+productPrice[1]);
+                system.debug('Price for '+Quantity+' '+SelectedProduct+' = '+(productPrice[1]*Quantity));
+                system.debug('Price after discount of '+ProductDiscount[1]+'% = '+amount*Quantity);
+                system.debug('Thanks for purchase');
+            }
+            else{system.debug('Out Of Stock');}
+        }
+        if (SelectedProduct == 'WM')
+        {
+            if (Quantity <= ProductStock[2])
+            {
+                integer amount = productPrice[2]-((productPrice[2]*ProductDiscount[2])/100);
+                system.debug('welcome to Dinesh SuperMarket');
+                system.debug('Price for each '+SelectedProduct+' = '+productPrice[2]);
+                system.debug('Price for '+Quantity+' '+SelectedProduct+' = '+(productPrice[2]*Quantity));
+                system.debug('Price after discount of '+ProductDiscount[2]+'% = '+amount*Quantity);
+                system.debug('Thanks for purchase');
+            }
+            else{system.debug('Out Of Stock');}
+        }
+        
+    }
+    
+    /* *********************************************************************************************
+       ********************************************************************************************* */ 
+    public void Reorder()
+    {
+        if (ProductStock[0] < 20) 
+        {
+            system.debug('Product '+ProductName[0]+' stock is low');
+        }
+        if (ProductStock[1] < 20) 
+        {
+            system.debug('Product '+ProductName[1]+' stock is low');
+        }
+        if (ProductStock[2] < 20) 
+        {
+            system.debug('Product '+ProductName[2]+' stock is low');
+        }
+        else {system.debug('No need to reorder, Stuck is enough for now ');}
+    }
+ 
+/* *********************************************************************************************
+  ********************************************************************************************* */ 
+    public void StockDisplay ()
+    {
+        System.debug('Stock level for product '+ProductName[0]+' is = '+ProductStock[0]);
+        System.debug('Stock level for product '+ProductName[1]+' is = '+ProductStock[1]);
+        System.debug('Stock level for product '+ProductName[2]+' is = '+ProductStock[2]);
+    }
+    
+}
